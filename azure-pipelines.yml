@@ -25,5 +25,5 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
     csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
-    overrideParameters: '-storageAccountName stazuredevops -containerName devops'
+    overrideParameters: '-storageAccountName stzestazuredevops -containerName devops'
     deploymentMode: 'Incremental'
