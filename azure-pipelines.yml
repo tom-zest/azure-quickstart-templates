@@ -2,9 +2,6 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-variables:
-  ARM_PASS: $(adminPass)
-
 trigger:
 - none
 
@@ -24,9 +21,9 @@ steps:
     subscriptionId: '44835d2b-1db7-4e2e-b21d-9304502887f6'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg-devops-created-vm'
-    location: 'Central US'
+    location: '$(location)'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
     csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
-    overrideParameters: '-siteName $(siteName) -administratorLogin $(adminUser) -administratorLoginPassword $(ARM_PASS)'
+    overrideParameters: '-location $(location) -storageAccountName $(stazuredevops) -containerName devops-storage'
     deploymentMode: 'Incremental'
