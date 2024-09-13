@@ -18,7 +18,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Tom Azure Connection'
-    subscriptionId: '44835d2b-1db7-4e2e-b21d-9304502887f6'
+    subscriptionId: 'b5ae176b-0e12-402f-a31b-101df5d03ea2'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg-zest-azure-devops'
     location: '$(location)'
