@@ -17,10 +17,10 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Zest Azure demo'
+    azureResourceManagerConnection: 'Tom Azure Connection'
     subscriptionId: '44835d2b-1db7-4e2e-b21d-9304502887f6'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'rg-devops-created-vm'
+    resourceGroupName: 'rg-zest-azure-devops'
     location: '$(location)'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
